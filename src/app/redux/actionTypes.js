@@ -1,0 +1,6 @@
+export default {
+  HEALTH: {
+    INCREMENT: 'HEALTH_INCREMENT',
+    DECREMENT: 'HEALTH_DECREMENT',
+  },
+};

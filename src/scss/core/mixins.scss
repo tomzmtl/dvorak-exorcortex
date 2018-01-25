@@ -1,0 +1,14 @@
+@mixin buttonCore {
+  display: block;
+  outline: none;
+  border: none;
+  background-clip: padding-box !important;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+%buttonCore {
+  @include buttonCore;
+}

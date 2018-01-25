@@ -1,0 +1,18 @@
+@import '../../../scss/core/variables';
+
+
+.Tabs {
+  display: flex;
+
+  &__tab {
+    padding: 10px;
+
+    & + & {
+      margin-left: 20px;
+    }
+
+    &--active {
+      background: $alt;
+    }
+  }
+}

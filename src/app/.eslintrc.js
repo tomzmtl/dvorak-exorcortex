@@ -20,5 +20,6 @@ module.exports = {
       exports: 'always-multiline',
       functions: 'ignore',
     }],
+    'jsx-a11y/no-static-element-interactions': 'off',
   },
 };

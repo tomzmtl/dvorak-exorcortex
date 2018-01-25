@@ -1,2 +1,24 @@
 @import 'core/normalize';
 @import 'core/variables';
+@import 'core/mixins';
+
+$fa-font-path: 'public/fonts';
+
+@import './font-awesome/font-awesome';
+
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+$font: 'Share Tech Mono', monospace;
+
+* { box-sizing: border-box }
+
+#app {
+  width: 1024px;
+  height: 768px;
+}
+
+body {
+  font-family: $font;
+  background: $bg;
+  color: $primary;
+}

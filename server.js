@@ -1,6 +1,7 @@
-const express = require('express')
-const app = express();
+const express = require('express');
 const path = require('path');
+
+const app = express();
 
 
 const PORT = process.env.PORT || 3000;
@@ -17,5 +18,5 @@ app.get('/favicon.ico', (req, res) =>
 );
 
 app.listen(PORT, () => {
-  console.log('Spark listening on port 3000!')
+  console.log('Spark listening on port 3000!');
 });
