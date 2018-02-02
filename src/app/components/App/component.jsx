@@ -32,9 +32,11 @@ const Root = () => (
         <Tabs />
       </div>
       <div className="App__view">
-        <div className="View">
-          <Health />
-        </div>
+        <div className="App__section-title">Health & Resolve</div>
+        <Health />
+        <div className="App__section-title">Armor Class</div>
+        <div className="App__section-title">Saving Throws</div>
+        <div className="App__section-title">Attack Bonuses</div>
         {/* renderSkills() */}
       </div>
     </div>

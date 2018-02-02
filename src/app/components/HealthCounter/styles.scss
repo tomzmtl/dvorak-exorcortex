@@ -1,0 +1,83 @@
+@import '../../../scss/core/variables';
+
+
+.HealthCounter {
+  width: 200px;
+  padding: 10px;
+  background: #191919;
+
+  &__display {
+    display: flex;
+    width: 100%;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  &__points {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    margin-right: 10px;
+  }
+
+  &__current {
+    font-size: 64px;
+    font-weight: 600;
+  }
+
+  &__actions {
+    width: 60px;
+  }
+
+  &__action {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    background: #111;
+    font-size: 40px;
+
+    span {
+      margin: auto;
+      line-height: 0.5;
+      color: #333;
+    }
+
+    &:first-child {
+      margin-bottom: 2px;
+    }
+
+    &:not(.HealthCounter__action--disabled):active {
+      background: black;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+    }
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  &--max .HealthCounter__current {
+    color: #6A6;
+  }
+
+  &--medium .HealthCounter__current {
+    color: #FC0;
+  }
+
+  &--low .HealthCounter__current {
+    color: #C33;
+  }
+
+  &--zero .HealthCounter__title {
+    color: #C33;
+  }
+}

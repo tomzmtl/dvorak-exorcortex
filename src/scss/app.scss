@@ -5,10 +5,9 @@
 $fa-font-path: 'public/fonts';
 
 @import './font-awesome/font-awesome';
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600');
 
-@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
-
-$font: 'Share Tech Mono', monospace;
+$font: 'Overpass Mono', monospace;
 
 * { box-sizing: border-box }
 
