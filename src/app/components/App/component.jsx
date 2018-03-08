@@ -4,7 +4,6 @@ import { createLogger } from 'redux-logger';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from '../../redux/reducers';
-import state from '../../redux/store';
 // import skills from '../../common/content/skills';
 
 // import Skill from '../Skill/component';
@@ -20,7 +19,7 @@ const logger = createLogger({
   diff: true,
 });
 
-const store = createStore(reducers, state, applyMiddleware(thunk, logger));
+const store = createStore(reducers, window.__PRELOADED_STATE__, applyMiddleware(thunk, logger));
 
 // const renderSkills = () => skills.map((s, i) => <Skill key={i.toString()} {...s} />);
 
