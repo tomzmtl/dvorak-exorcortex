@@ -17,6 +17,7 @@ const HealthCounter = ({ label, current, total, onIncrement, onDecrement }) => {
     'HealthCounter--medium': current <= (third * 2),
     'HealthCounter--low': current <= third,
     'HealthCounter--zero': zero,
+    UiStat: true,
   });
 
   const incClasses = classnames({
@@ -37,7 +38,7 @@ const HealthCounter = ({ label, current, total, onIncrement, onDecrement }) => {
       </div>
       <div className="HealthCounter__display">
         <div className="HealthCounter__points">
-          <span className="HealthCounter__current">{current}</span>
+          <span className="HealthCounter__current UiStat__value">{current}</span>
         </div>
         <div className="HealthCounter__actions">
           <div className={incClasses} onClick={max ? null : onIncrement}>

@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
 const hbsHelpers = require('./helpers/handlebars');
+const state = require('./state');
 
 const app = express();
 const hbs = expressHandlebars.create({
@@ -10,7 +11,6 @@ const hbs = expressHandlebars.create({
 });
 
 const PORT = process.env.PORT || 3000;
-
 
 // handlebars
 app.engine('.hbs', hbs.engine);
@@ -25,22 +25,7 @@ app.get('/favicon.ico', (req, res) =>
 
 app.get('*', (req, res) => {
   res.render('index', {
-    state: JSON.stringify({
-      health: {
-        stamina: {
-          total: 21,
-          current: 21,
-        },
-        hit: {
-          total: 26,
-          current: 26,
-        },
-        resolve: {
-          total: 4,
-          current: 4,
-        },
-      },
-    }),
+    state: JSON.stringify(state),
   });
 });
 

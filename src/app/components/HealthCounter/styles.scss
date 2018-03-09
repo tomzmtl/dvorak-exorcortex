@@ -2,10 +2,6 @@
 
 
 .HealthCounter {
-  width: 200px;
-  padding: 10px;
-  background: #191919;
-
   &__display {
     display: flex;
     width: 100%;
@@ -24,11 +20,6 @@
     align-self: center;
     text-align: center;
     margin-right: 10px;
-  }
-
-  &__current {
-    font-size: 64px;
-    font-weight: 600;
   }
 
   &__actions {

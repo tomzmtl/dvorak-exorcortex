@@ -1,0 +1,10 @@
+.UiStat {
+  width: 200px;
+  padding: 10px;
+  background: #191919;
+
+  &__value {
+    font-size: 64px;
+    font-weight: 600;
+  }
+}

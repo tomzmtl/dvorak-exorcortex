@@ -19,6 +19,14 @@
     padding: 20px;
   }
 
+  &__section {
+    display: flex;
+
+    .Stat + .Stat {
+      margin-left: 10px;
+    }
+  }
+
   &__section-title {
     padding: 6px;
     margin-bottom: 8px;

@@ -5,7 +5,7 @@ import HealthCounter from '../HealthCounter/component';
 import './styles.scss';
 
 
-const Tabs = ({ stamina, hit, resolve, decrementStat, incrementStat }) => (
+const Health = ({ stamina, hit, resolve, decrementStat, incrementStat }) => (
   <div className="Health">
     <HealthCounter
       label="Stamina"
@@ -31,7 +31,7 @@ const Tabs = ({ stamina, hit, resolve, decrementStat, incrementStat }) => (
   </div>
 );
 
-Tabs.propTypes = {
+Health.propTypes = {
   stamina: PropTypes.shape({
     current: PropTypes.number.isRequired,
     total: PropTypes.number.isRequired,
@@ -48,4 +48,4 @@ Tabs.propTypes = {
   incrementStat: PropTypes.func.isRequired,
 };
 
-export default Tabs;
+export default Health;
