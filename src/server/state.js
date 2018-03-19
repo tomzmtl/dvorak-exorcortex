@@ -30,30 +30,44 @@ module.exports = {
     base: 8,
     upgrades: 1,
   },
-  str: {
-    score: 10,
-    modifier: 0,
-  },
-  dex: {
-    score: 17,
-    modifier: 3,
-  },
-  con: {
-    score: 12,
-    modifier: 1,
-  },
-  int: {
-    score: 16,
-    modifier: 3,
-  },
-  wis: {
-    score: 10,
-    modifier: 0,
-  },
-  cha: {
-    score: 8,
-    modifier: -1,
-  },
+  abilities: [
+    {
+      key: 'str',
+      modifier: 0,
+      name: 'Strength',
+      score: 10,
+    },
+    {
+      key: 'dex',
+      modifier: 3,
+      name: 'Dexterity',
+      score: 17,
+    },
+    {
+      key: 'con',
+      modifier: 1,
+      name: 'Constitution',
+      score: 12,
+    },
+    {
+      key: 'int',
+      modifier: 3,
+      name: 'Intelligence',
+      score: 16,
+    },
+    {
+      key: 'wis',
+      modifier: 0,
+      name: 'Wisdom',
+      score: 10,
+    },
+    {
+      key: 'cha',
+      modifier: -1,
+      name: 'Charisma',
+      score: 8,
+    },
+  ],
   skills: [
     {
       key: 'acrobatics',
