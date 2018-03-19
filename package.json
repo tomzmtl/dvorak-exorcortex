@@ -2,11 +2,14 @@
   "name": "spark",
   "version": "0.2.0",
   "description": "Single Page App Boilerplate",
-  "main": "index.html",
+  "main": "index.js",
   "repository": "https://github.com/tomzmtl/spark",
   "scripts": {
+    "build": "webpack",
     "dev": "webpack --watch & nodemon src/server",
     "lint": "eslint src/app/**/*.js",
+    "postinstall": "npm run build",
+    "start": "node src/server",
     "test": "mocha --opts mocha.opts --harmony || true",
     "travis": "mocha --opts mocha.travis.opts --harmony"
   },
