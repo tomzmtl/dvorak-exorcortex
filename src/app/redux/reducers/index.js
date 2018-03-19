@@ -1,4 +1,4 @@
-import actionTypes from '../actionTypes';
+import ACTIONS from '../actionTypes';
 
 
 const initialState = {
@@ -34,7 +34,7 @@ const initialState = {
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {
-    case actionTypes.HEALTH.INCREMENT: {
+    case ACTIONS.HEALTH.INCREMENT: {
       const { item, increment } = action;
       const stat = state[item];
       const test = increment < 0 ? stat.current === 0 : stat.current === stat.total;
@@ -47,6 +47,18 @@ export default (state = initialState, action = {}) => {
         },
       };
     }
+
+    case ACTIONS.TAB.CHANGE:
+      if (state.ui.selectedTab !== action.index) {
+        return {
+          ...state,
+          ui: {
+            ...state.ui,
+            selectedTab: action.index,
+          },
+        };
+      }
+      return state;
 
     default: return state;
   }

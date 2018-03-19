@@ -3,8 +3,8 @@ import Health from '../Health/container';
 import Stat from '../Stat/component';
 
 
-const View = ({ eac, kac }) => (
-  <div>
+const CombatView = ({ eac, kac, selectedTab }) => (
+  <div className="CombatView">
     <div className="App__section-title">Health & Resolve</div>
     <Health />
     <div className="App__section-title">Armor Class</div>
@@ -17,4 +17,5 @@ const View = ({ eac, kac }) => (
   </div>
 );
 
-export default View;
+
+export default CombatView;

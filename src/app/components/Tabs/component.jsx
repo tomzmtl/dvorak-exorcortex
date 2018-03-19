@@ -1,14 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import PROPTYPES from '../../redux/propTypes';
 
 import './styles.scss';
 
 
-const Tabs = () => (
+const renderTab = (index, label, selectedIndex, handleClick) => {
+  const classes = classnames({
+    Tabs__tab: true,
+    'Tabs__tab--active': index === selectedIndex,
+  });
+
+  return <div className={classes} onClick={() => handleClick(index)}>{label}</div>;
+};
+
+const Tabs = ({ changeTab, selectedTab }) => (
   <div className="Tabs">
-    <div className="Tabs__tab Tabs__tab--active">Combat</div>
-    <div className="Tabs__tab">Skills</div>
-    <div className="Tabs__tab">Stats</div>
+    {renderTab(0, 'Combat', selectedTab, changeTab)}
+    {renderTab(1, 'Skills', selectedTab, changeTab)}
   </div>
 );
+
+Tabs.propTypes = {
+  changeTab: PropTypes.func.isRequired,
+  selectedTab: PROPTYPES.ui.selectedTab.isRequired,
+};
 
 export default Tabs;

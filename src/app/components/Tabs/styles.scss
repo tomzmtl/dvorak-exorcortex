@@ -3,16 +3,20 @@
 
 .Tabs {
   display: flex;
+  align-self: flex-end;
 
   &__tab {
     padding: 10px;
+    color: #CCC;
+    font-weight: normal;
 
     & + & {
       margin-left: 20px;
     }
 
     &--active {
-      background: $alt;
+      background: $bg;
+      color: $alt;
     }
   }
 }

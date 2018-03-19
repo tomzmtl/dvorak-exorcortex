@@ -11,8 +11,9 @@
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    background: $primary;
-    color: $bg;
+    background: black;
+    color: $alt;
+    font-weight: bold;
   }
 
   &__view {
@@ -30,7 +31,7 @@
   &__section-title {
     padding: 6px;
     margin-bottom: 8px;
-    background: black;
+    color: #CCC;
 
     &:not(:first-child) {
       margin-top: 10px;
