@@ -1,0 +1,33 @@
+@import '../../../scss/core/variables';
+
+.SkillsView {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  &__col {
+    width: 100%;
+    line-height: 2;
+  }
+
+  &__skill {
+    font-size: 32px;
+    display: flex;
+
+    &--medium {
+      opacity: 0.7;
+    }
+
+    &--weak {
+      opacity: 0.4;
+    }
+  }
+
+  &__name {
+    margin-right: 20px;
+  }
+
+  &__total {
+    color: $grey-light;
+  }
+}

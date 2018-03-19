@@ -1,6 +1,6 @@
 module.exports = {
   ui: {
-    selectedTab: 0,
+    selectedTab: 1,
   },
   stamina: {
     total: 21,
