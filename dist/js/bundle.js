@@ -7274,7 +7274,14 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var skill = _propTypes2.default.shape({
+  key: _propTypes2.default.string.isRequired,
+  name: _propTypes2.default.string.isRequired,
+  total: _propTypes2.default.number.isRequired
+});
+
 exports.default = {
+  skills: _propTypes2.default.arrayOf(skill.isRequired),
   ui: {
     selectedTab: _propTypes2.default.number
   }
@@ -12258,7 +12265,7 @@ exports = module.exports = __webpack_require__(18)(undefined);
 
 
 // module
-exports.push([module.i, ".App {\n  width: 100%;\n  height: 100%; }\n  .App__header {\n    display: flex;\n    padding: 0 20px;\n    height: 50px;\n    justify-content: space-between;\n    align-items: center;\n    font-size: 20px;\n    background: black;\n    color: #FFDD99;\n    font-weight: bold; }\n  .App__view {\n    padding: 20px; }\n  .App__section {\n    display: flex; }\n    .App__section .Stat + .Stat {\n      margin-left: 10px; }\n  .App__section-title {\n    padding: 6px;\n    margin-bottom: 8px;\n    color: #CCC; }\n    .App__section-title:not(:first-child) {\n      margin-top: 10px; }\n", ""]);
+exports.push([module.i, ".App {\n  width: 100%;\n  height: 100%; }\n  .App__header {\n    display: flex;\n    padding: 0 20px;\n    height: 50px;\n    justify-content: space-between;\n    align-items: center;\n    font-size: 20px;\n    background: #060606;\n    color: #FFDD99;\n    font-weight: bold; }\n  .App__view {\n    padding: 20px; }\n  .App__section {\n    display: flex; }\n    .App__section .Stat + .Stat {\n      margin-left: 10px; }\n  .App__section-title {\n    padding: 6px;\n    margin-bottom: 8px;\n    color: #CCC; }\n    .App__section-title:not(:first-child) {\n      margin-top: 10px; }\n", ""]);
 
 // exports
 
@@ -12314,7 +12321,7 @@ exports = module.exports = __webpack_require__(18)(undefined);
 
 
 // module
-exports.push([module.i, ".Tabs {\n  display: flex;\n  align-self: flex-end; }\n  .Tabs__tab {\n    padding: 10px;\n    color: #CCC;\n    font-weight: normal; }\n    .Tabs__tab + .Tabs__tab {\n      margin-left: 20px; }\n    .Tabs__tab--active {\n      background: #121212;\n      color: #FFDD99; }\n", ""]);
+exports.push([module.i, ".Tabs {\n  display: flex;\n  align-self: flex-end; }\n  .Tabs__tab {\n    padding: 10px;\n    color: #CCC;\n    font-weight: normal;\n    border-bottom: 3px solid transparent; }\n    .Tabs__tab + .Tabs__tab {\n      margin-left: 20px; }\n    .Tabs__tab--active {\n      color: #FFDD99;\n      border-bottom-color: #FFDD99; }\n", ""]);
 
 // exports
 
@@ -25931,25 +25938,61 @@ var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = __webpack_require__(60);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _propTypes = __webpack_require__(59);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+__webpack_require__(260);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var renderSkills = function renderSkills(skill, i) {
+var renderSkill = function renderSkill(skill) {
+  var classes = (0, _classnames2.default)({
+    SkillsView__skill: true,
+    'SkillsView__skill--medium': skill.total < 7 && skill.total > 3,
+    'SkillsView__skill--weak': skill.total <= 3
+  });
+
   return _react2.default.createElement(
-    "div",
-    { className: "App__section-title", key: skill.key },
-    skill.name,
-    " : ",
-    skill.total
+    'div',
+    { className: classes, key: skill.key },
+    _react2.default.createElement(
+      'div',
+      { className: 'SkillsView__name' },
+      skill.name
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'SkillsView__total' },
+      skill.total
+    )
   );
 };
 
 var SkillsView = function SkillsView(_ref) {
   var skills = _ref.skills;
   return _react2.default.createElement(
-    "div",
-    { className: "SkillsView" },
-    skills.map(renderSkills)
+    'div',
+    { className: 'SkillsView' },
+    _react2.default.createElement(
+      'div',
+      { className: 'SkillsView__col' },
+      skills.slice(0, 10).map(renderSkill)
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'SkillsView__col' },
+      skills.slice(10).map(renderSkill)
+    )
   );
+};
+
+SkillsView.propTypes = {
+  skills: _propTypes2.default.skills.isRequired
 };
 
 exports.default = SkillsView;
@@ -25976,11 +26019,58 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var mapState = function mapState(_ref) {
   var skills = _ref.skills;
   return {
-    skills: skills
+    skills: skills.sort(function (a, b) {
+      return a.total > b.total ? -1 : 1;
+    })
   };
 };
 
 exports.default = (0, _reactRedux.connect)(mapState)(_component2.default);
+
+/***/ }),
+/* 259 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(18)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".SkillsView {\n  display: flex;\n  width: 100%;\n  justify-content: space-between; }\n  .SkillsView__col {\n    width: 100%;\n    line-height: 2; }\n  .SkillsView__skill {\n    font-size: 32px;\n    display: flex; }\n    .SkillsView__skill--medium {\n      opacity: 0.7; }\n    .SkillsView__skill--weak {\n      opacity: 0.4; }\n  .SkillsView__name {\n    margin-right: 20px; }\n  .SkillsView__total {\n    color: #CCC; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 260 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(259);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(23)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js?url=false!../../../../node_modules/sass-loader/lib/loader.js!./styles.scss", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js?url=false!../../../../node_modules/sass-loader/lib/loader.js!./styles.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

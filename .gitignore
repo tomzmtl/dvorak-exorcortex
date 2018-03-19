@@ -9,3 +9,4 @@ static/dist
 static/css/app.min.css
 .sass-cache
 /package-lock.json
+/dist/js/bundle.js
