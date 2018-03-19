@@ -1,6 +1,6 @@
 module.exports = {
   ui: {
-    selectedTab: 1,
+    selectedTab: 0,
   },
   stamina: {
     total: 21,
@@ -102,7 +102,7 @@ module.exports = {
     },
     {
       key: 'lifeScience',
-      name: 'LifeScience',
+      name: 'Life Science',
       total: 3,
     },
     {
@@ -137,7 +137,7 @@ module.exports = {
     },
     {
       key: 'senseMotive',
-      name: 'SenseMotive',
+      name: 'Sense Motive',
       total: 0,
     },
     {
