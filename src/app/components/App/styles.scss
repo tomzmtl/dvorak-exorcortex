@@ -29,12 +29,11 @@
   }
 
   &__section-title {
-    padding: 6px;
     margin-bottom: 8px;
     color: $grey-light;
 
     &:not(:first-child) {
-      margin-top: 10px;
+      margin-top: 20px;
     }
   }
 }

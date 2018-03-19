@@ -23,10 +23,12 @@ const renderSkill = (skill) => {
 const SkillsView = ({ skills }) => (
   <div className="SkillsView">
     <div className="SkillsView__col">
-      {skills.slice(0, 10).map(renderSkill)}
+      <div className="App__section-title">Main Skills</div>
+      {skills.filter(s => s.total >= 4).map(renderSkill)}
     </div>
     <div className="SkillsView__col">
-      {skills.slice(10).map(renderSkill)}
+      <div className="App__section-title">Other Skills</div>
+      {skills.filter(s => s.total < 4).map(renderSkill)}
     </div>
   </div>
 );
