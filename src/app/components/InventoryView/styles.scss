@@ -1,40 +1,7 @@
 @import '../../../scss/core/variables';
 
-.SkillsView {
+.InventoryView {
   display: flex;
-  width: 100%;
+  flex-flow: row wrap;
   justify-content: space-between;
-
-  &__col {
-    width: 100%;
-  }
-
-  &__skill {
-    font-size: 32px;
-    display: flex;
-
-    & + & {
-      margin-top: 16px;
-    }
-
-    &--medium {
-      opacity: 0.7;
-    }
-
-    &--weak {
-      opacity: 0.4;
-    }
-  }
-
-  &__name {
-    margin-right: 20px;
-  }
-
-  &__total {
-    color: $grey-light;
-  }
-
-  .App__section-title {
-    margin-bottom: 20px;
-  }
 }

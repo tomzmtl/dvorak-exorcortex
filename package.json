@@ -37,6 +37,8 @@
     "deep-freeze": "0.0.1",
     "express": "~4.16.2",
     "express-handlebars": "^3.0.0",
+    "fans-router": "^1.4.0",
+    "history": "^4.7.2",
     "lodash": "^4.17.4",
     "mocha": "3.3.0",
     "node-sass": "~4.7.2",

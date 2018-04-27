@@ -4,9 +4,9 @@ import { decrement, increment } from '../../redux/actions/health';
 
 
 const mapState = state => ({
-  hit: state.hit,
-  resolve: state.resolve,
-  stamina: state.stamina,
+  hit: state.app.hit,
+  resolve: state.app.resolve,
+  stamina: state.app.stamina,
 });
 
 const mapDispatch = dispatch => ({

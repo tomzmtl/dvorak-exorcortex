@@ -5,7 +5,7 @@ import './styles.scss';
 
 const Stat = ({ name, value }) => (
   <div className="Stat UiStat">
-    <div className="Stat__name">{name}</div>
+    <div className="UiStat__name">{name}</div>
     <div className="Stat__value UiStat__value">{value}</div>
   </div>
 );

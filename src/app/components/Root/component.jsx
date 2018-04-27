@@ -3,7 +3,9 @@ import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
+import { Provider as RouterProvider, createRouter } from 'fans-router';
 import reducers from '../../redux/reducers';
+import routes from '../../router/routes';
 
 import App from '../App/container';
 
@@ -21,9 +23,11 @@ store.dispatch({ type: 'APP_INIT' });
 
 const Root = () => (
   <Provider store={store}>
-    <div className="Root">
-      <App />
-    </div>
+    <RouterProvider router={createRouter(routes)}>
+      <div className="Root">
+        <App selectedTab={1} />
+      </div>
+    </RouterProvider>
   </Provider>
 );
 

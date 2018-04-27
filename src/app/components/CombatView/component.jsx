@@ -2,8 +2,10 @@ import React from 'react';
 import Health from '../Health/container';
 import Stat from '../Stat/component';
 
+import './styles.scss';
 
-const CombatView = ({ eac, kac, selectedTab }) => (
+
+const CombatView = ({ eac, kac }) => (
   <div className="CombatView">
     <div className="App__section-title">Health & Resolve</div>
     <Health />

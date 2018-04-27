@@ -2,10 +2,9 @@ import { connect } from 'react-redux';
 import View from './component';
 
 
-const mapState = ({ eac, kac, ui }) => ({
-  eac,
-  kac,
-  selectedTab: ui.selectedTab,
+const mapState = ({ app }) => ({
+  eac: app.eac,
+  kac: app.kac,
 });
 
 export default connect(mapState)(View);

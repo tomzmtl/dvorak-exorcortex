@@ -1,4 +1,11 @@
 .InventoryItem {
+  width: 300px;
   background: #000;
   border: 1px solid #222;
+
+  &:not(:first-child),
+  &:not(:nth-child(2)),
+  &:not(:nth-child(3)) {
+    margin-top: 30px;
+  }
 }

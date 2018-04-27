@@ -5,13 +5,14 @@
   display: flex;
   align-self: flex-end;
 
-  &__tab {
+  .Link {
     padding: 10px;
     color: #CCC;
     font-weight: normal;
     border-bottom: 3px solid transparent;
+    text-decoration: none;
 
-    & + & {
+    & + .Link {
       margin-left: 20px;
     }
 

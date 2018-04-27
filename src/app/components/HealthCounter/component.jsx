@@ -32,7 +32,7 @@ const HealthCounter = ({ label, current, total, onIncrement, onDecrement }) => {
 
   return (
     <div className={classes}>
-      <div className="HealthCounter__label">
+      <div className="HealthCounter__label UiStat__name">
         <span className="HealthCounter__title">{label}</span>
         <span className="HealthCounter__total">{total}</span>
       </div>

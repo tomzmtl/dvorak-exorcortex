@@ -1,31 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import PROPTYPES from '../../redux/propTypes';
+import { Link } from 'fans-router';
 
 import './styles.scss';
 
 
-const renderTab = (index, label, selectedIndex, handleClick) => {
-  const classes = classnames({
-    Tabs__tab: true,
-    'Tabs__tab--active': index === selectedIndex,
-  });
+const renderTab = (label, to) => <Link to={to}>{label}</Link>;
 
-  return <div className={classes} onClick={() => handleClick(index)}>{label}</div>;
-};
-
-const Tabs = ({ changeTab, selectedTab }) => (
+const Tabs = () => (
   <div className="Tabs">
-    {renderTab(0, 'Combat', selectedTab, changeTab)}
-    {renderTab(1, 'Skills', selectedTab, changeTab)}
-    {renderTab(2, 'Inventory', selectedTab, changeTab)}
+    {renderTab('Dashboard', '/')}
+    {renderTab('Combat', '/combat')}
+    {renderTab('Skills', '/skills')}
+    {renderTab('Inventory', '/inventory')}
   </div>
 );
-
-Tabs.propTypes = {
-  changeTab: PropTypes.func.isRequired,
-  selectedTab: PROPTYPES.ui.selectedTab.isRequired,
-};
 
 export default Tabs;
