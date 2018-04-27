@@ -4,6 +4,7 @@ import PROPTYPES from '../../redux/propTypes';
 import Tabs from '../Tabs/container';
 import CombatView from '../CombatView/container';
 import SkillsView from '../SkillsView/container';
+import InventoryView from '../InventoryView/container';
 
 import './styles.scss';
 
@@ -11,6 +12,7 @@ import './styles.scss';
 const views = [
   <CombatView />,
   <SkillsView />,
+  <InventoryView />,
 ];
 
 const App = ({ selectedTab }) => (

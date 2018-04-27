@@ -170,4 +170,42 @@ module.exports = {
       total: 0,
     },
   ],
+  inventory: {
+    items: [
+      {
+        name: 'Frag Grenade mk.1',
+        type: 'grenade',
+        stats: {
+          range: 20,
+          radius: 15,
+          explode: [1, 6],
+        },
+      },
+      {
+        name: 'Frag Grenade mk.2',
+        type: 'grenade',
+        stats: {
+          range: 20,
+          radius: 15,
+          explode: [2, 6],
+        },
+      },
+      {
+        name: 'Iridishell Basic',
+        type: 'armor',
+        equipped: true,
+        stats: {
+          level: 2,
+          price: 755,
+          eacBonus: 3,
+          kacBonus: 6,
+          maxDexBonus: 2,
+          armorCheckPenalty: -2,
+          speedAdjustment: -5,
+          upgradeSlots: 0,
+          bulk: 2,
+        },
+      },
+    ],
+  },
 };

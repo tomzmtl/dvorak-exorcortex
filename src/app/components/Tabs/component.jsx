@@ -19,6 +19,7 @@ const Tabs = ({ changeTab, selectedTab }) => (
   <div className="Tabs">
     {renderTab(0, 'Combat', selectedTab, changeTab)}
     {renderTab(1, 'Skills', selectedTab, changeTab)}
+    {renderTab(2, 'Inventory', selectedTab, changeTab)}
   </div>
 );
 
