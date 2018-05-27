@@ -1,18 +1,29 @@
+const LVL = 4;
 const BAB = 3;
+const CLASS = {
+  HP: 6,
+  SP: 6,
+};
+const CON_MOD = 1;
+const INT_MOD = 3;
+
+const HP = 8 + (LVL * CLASS.HP);
+const SP = LVL * (CLASS.SP + CON_MOD);
+const RP = Math.ceil(LVL / 2) + INT_MOD;
 
 module.exports = {
   app: {
     stamina: {
-      total: 21,
-      current: 21,
+      total: SP,
+      current: SP,
     },
     hit: {
-      total: 26,
-      current: 26,
+      total: HP,
+      current: HP,
     },
     resolve: {
-      total: 4,
-      current: 4,
+      total: RP,
+      current: RP,
     },
     eac: {
       base: 10,
@@ -79,13 +90,13 @@ module.exports = {
       },
       {
         key: 'con',
-        modifier: 1,
+        modifier: CON_MOD,
         name: 'Constitution',
         score: 12,
       },
       {
         key: 'int',
-        modifier: 3,
+        modifier: INT_MOD,
         name: 'Intelligence',
         score: 16,
       },
