@@ -137,7 +137,7 @@ module.exports = {
         key: 'computers',
         name: 'Computers',
         stats: {
-          ranks: 3,
+          ranks: 4,
           classBonus: 3,
           abilityMod: 3,
           miscMod: 1,
@@ -177,7 +177,7 @@ module.exports = {
         key: 'engineering',
         name: 'Engineering',
         stats: {
-          ranks: 3,
+          ranks: 4,
           classBonus: 3,
           abilityMod: 3,
           miscMod: 1,
@@ -247,7 +247,7 @@ module.exports = {
         key: 'piloting',
         name: 'Piloting',
         stats: {
-          ranks: 3,
+          ranks: 4,
           classBonus: 3,
           abilityMod: 3,
           miscMod: 0,
@@ -257,7 +257,7 @@ module.exports = {
         key: 'profession',
         name: 'Profession',
         stats: {
-          ranks: 3,
+          ranks: 4,
           classBonus: 3,
           abilityMod: 3,
           miscMod: 0,
@@ -287,7 +287,7 @@ module.exports = {
         key: 'stealth',
         name: 'Stealth',
         stats: {
-          ranks: 0,
+          ranks: 3,
           classBonus: 0,
           abilityMod: 3,
           miscMod: 0,
