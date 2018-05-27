@@ -27,13 +27,13 @@ module.exports = {
     },
     eac: {
       base: 10,
-      armorBonus: 2,
+      armorBonus: 3,
       dexMod: 2,
       miscMod: 0,
     },
     kac: {
       base: 10,
-      armorBonus: 4,
+      armorBonus: 6,
       dexMod: 2,
       miscMod: 0,
     },
