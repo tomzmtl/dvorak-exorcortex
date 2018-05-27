@@ -1,3 +1,5 @@
+const BAB = 3;
+
 module.exports = {
   app: {
     stamina: {
@@ -27,6 +29,40 @@ module.exports = {
     acVsComMan: {
       base: 8,
       upgrades: 1,
+    },
+    savingThrows: {
+      fortitude: {
+        base: 4,
+        abilityMod: 1,
+        miscMod: 2,
+      },
+      reflex: {
+        base: 4,
+        abilityMod: 3,
+        miscMod: 2 - 2,
+      },
+      will: {
+        base: 1,
+        abilityMod: 0,
+        miscMod: 0,
+      },
+    },
+    attackBonuses: {
+      melee: {
+        bab: BAB,
+        strMod: 0,
+        miscMod: 0,
+      },
+      ranged: {
+        bab: BAB,
+        strMod: 3,
+        miscMod: 0,
+      },
+      thrown: {
+        bab: BAB,
+        strMod: 0,
+        miscMod: 0,
+      },
     },
     abilities: [
       {
@@ -70,102 +106,202 @@ module.exports = {
       {
         key: 'acrobatics',
         name: 'Acrobatics',
-        total: 3,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: 3,
+          miscMod: 0,
+        },
       },
       {
         key: 'athletics',
         name: 'Athletics',
-        total: 5,
+        stats: {
+          ranks: 2,
+          classBonus: 3,
+          abilityMod: 0,
+          miscMod: 0,
+        },
       },
       {
         key: 'bluff',
         name: 'Bluff',
-        total: -1,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: -1,
+          miscMod: 0,
+        },
       },
       {
         key: 'computers',
         name: 'Computers',
-        total: 10,
+        stats: {
+          ranks: 3,
+          classBonus: 3,
+          abilityMod: 3,
+          miscMod: 1,
+        },
       },
       {
         key: 'culture',
         name: 'Culture',
-        total: 3,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: 3,
+          miscMod: 0,
+        },
       },
       {
         key: 'diplomacy',
         name: 'Diplomacy',
-        total: -1,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: -1,
+          miscMod: 0,
+        },
       },
       {
         key: 'disguise',
         name: 'Disguise',
-        total: -1,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: -1,
+          miscMod: 0,
+        },
       },
       {
         key: 'engineering',
         name: 'Engineering',
-        total: 10,
+        stats: {
+          ranks: 3,
+          classBonus: 3,
+          abilityMod: 3,
+          miscMod: 1,
+        },
       },
       {
         key: 'intimidate',
         name: 'Intimidate',
-        total: 2,
+        stats: {
+          ranks: 3,
+          classBonus: 0,
+          abilityMod: -1,
+          miscMod: 0,
+        },
       },
       {
         key: 'lifeScience',
         name: 'Life Science',
-        total: 3,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: 3,
+          miscMod: 0,
+        },
       },
       {
         key: 'medicine',
         name: 'Medicine',
-        total: 7,
+        stats: {
+          ranks: 1,
+          classBonus: 3,
+          abilityMod: 3,
+          miscMod: 0,
+        },
       },
       {
         key: 'mysticism',
         name: 'Mysticism',
-        total: 3,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: 3,
+          miscMod: 0,
+        },
       },
       {
         key: 'perception',
         name: 'Perception',
-        total: 4,
+        stats: {
+          ranks: 1,
+          classBonus: 3,
+          abilityMod: 0,
+          miscMod: 0,
+        },
       },
       {
         key: 'physicalScience',
         name: 'Physical Science',
-        total: 8,
+        stats: {
+          ranks: 2,
+          classBonus: 3,
+          abilityMod: 3,
+          miscMod: 0,
+        },
       },
       {
         key: 'piloting',
         name: 'Piloting',
-        total: 9,
+        stats: {
+          ranks: 3,
+          classBonus: 3,
+          abilityMod: 3,
+          miscMod: 0,
+        },
       },
       {
         key: 'profession',
         name: 'Profession',
-        total: 9,
+        stats: {
+          ranks: 3,
+          classBonus: 3,
+          abilityMod: 3,
+          miscMod: 0,
+        },
       },
       {
         key: 'senseMotive',
         name: 'Sense Motive',
-        total: 0,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: 0,
+          miscMod: 0,
+        },
       },
       {
         key: 'sleightOfHands',
         name: 'Sleight Of Hands',
-        total: 3,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: 3,
+          miscMod: 0,
+        },
       },
       {
         key: 'stealth',
         name: 'Stealth',
-        total: 3,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: 3,
+          miscMod: 0,
+        },
       },
       {
         key: 'survival',
         name: 'Survival',
-        total: 0,
+        stats: {
+          ranks: 0,
+          classBonus: 0,
+          abilityMod: 0,
+          miscMod: 0,
+        },
       },
     ],
     inventory: {
@@ -204,7 +340,101 @@ module.exports = {
             bulk: 2,
           },
         },
+
+        {
+          name: 'Pulsecaster Pistol',
+          type: 'weapon',
+          equipped: false,
+          stats: {
+            level: 1,
+            attackBonus: 0,
+            damage: [1, 4],
+            critical: null,
+            range: 30,
+            type: 'E',
+            ammo: [20, 1],
+            special: [
+              'nonlethal',
+            ],
+          },
+        },
+
+        {
+          name: 'KT-53 Quick-Draw Firedrake',
+          type: 'weapon',
+          equipped: false,
+          stats: {
+            level: 2,
+            attackBonus: 0,
+            damage: [1, 6],
+            critical: {
+              damage: [1, 6],
+              type: 'B',
+            },
+            range: 120,
+            type: 'F',
+            ammo: [8, 1],
+            special: [
+              'analog',
+              'quick-reload',
+            ],
+          },
+        },
+
+        {
+          name: 'ZTN-197 Mithril Storm',
+          type: 'weapon',
+          equipped: false,
+          stats: {
+            level: 2,
+            attackBonus: 0,
+            damage: [1, 8],
+            critical: null,
+            range: 40,
+            type: 'E',
+            ammo: [80, 4],
+            special: [
+              'analog',
+              {
+                damage: [1, 6],
+                type: 'B',
+              },
+            ],
+          },
+        },
+
+        {
+          name: 'Unerring Ass Hammer',
+          type: 'weapon',
+          equipped: false,
+          stats: {
+            level: 1,
+            attackBonus: 4,
+            damage: [1, 6],
+            critical: null,
+            range: 0,
+            type: 'B',
+            ammo: null,
+            special: [],
+          },
+        },
       ],
     },
+    feats: [
+      { name: 'Constructed' },
+      { name: 'Exceptional Vision' },
+      { name: 'Flat Affect' },
+      { name: 'Upgrade Slot' },
+      { name: 'AI (Exocortex)' },
+      { name: 'Bypass' },
+      { name: 'Custom Rig' },
+      { name: 'Armor: Light/Heavy' },
+      { name: 'Weapons: Small/Long/Melee' },
+      { name: 'Grenades' },
+      { name: 'Overload' },
+      { name: 'Weapon Secialty (class)' },
+      { name: 'Amplified Glitch' },
+      { name: 'Jet Dash' },
+    ],
   },
 };

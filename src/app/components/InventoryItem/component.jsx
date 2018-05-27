@@ -6,7 +6,7 @@ import './styles.scss';
 
 const InventoryItem = ({ item }) => (
   <div className="InventoryItem UiStat">
-    <div className="UiStat__name">{item.name}<br />{item.type}</div>
+    <div className="UiStat__name">{item.name}</div>
   </div>
 );
 

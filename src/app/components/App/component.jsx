@@ -9,7 +9,7 @@ import './styles.scss';
 
 
 const views = {
-  root: <div>{'DV0R4K LVL.3'}</div>,
+  root: <div>{'DV0R4K LVL.4'}</div>,
   'root.combat': <CombatView />,
   'root.skills': <SkillsView />,
   'root.inventory': <InventoryView />,
@@ -18,7 +18,7 @@ const views = {
 const App = ({ route }) => (
   <div className="App">
     <div className="App__header">
-      <div className="App__title">{'DV0R4K ExoCortex UI'}</div>
+      <div className="App__title">{'DV0R4K ExoCortex UI LVL.4'}</div>
       <Tabs selectedTab={Object.keys(views).findIndex(key => key === route.name)} />
     </div>
     <div className="App__view">

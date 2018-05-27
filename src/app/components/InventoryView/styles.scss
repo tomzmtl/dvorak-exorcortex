@@ -1,7 +1,9 @@
 @import '../../../scss/core/variables';
 
 .InventoryView {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  &__category {
+    & + & {
+      margin-top: 30px;
+    }
+  }
 }

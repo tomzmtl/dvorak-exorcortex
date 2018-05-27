@@ -5,18 +5,23 @@ import InventoryItem from '../InventoryItem/component';
 import './styles.scss';
 
 
-const renderItems = items => items.map((item, i) => (
-  <InventoryItem key={i.toString()} item={item} />
+const renderItems = categories => categories.map(cat => (
+  <div className="InventoryView__category" key={cat.label}>
+    <div className="App__section-title">{cat.label}</div>
+    <div className="App__section">
+      {cat.items.map((item, i) => <InventoryItem key={i.toString()} item={item} />)}
+    </div>
+  </div>
 ));
 
-const InventoryView = ({ items }) => (
+const InventoryView = ({ categories }) => (
   <div className="InventoryView">
-    {renderItems(items)}
+    {renderItems(categories)}
   </div>
 );
 
 InventoryView.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  categories: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 };
 
 
