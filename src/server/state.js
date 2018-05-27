@@ -435,6 +435,7 @@ module.exports = {
       { name: 'Weapon Secialty (class)' },
       { name: 'Amplified Glitch' },
       { name: 'Jet Dash' },
+      { name: 'Hack directory' },
     ],
   },
 };
