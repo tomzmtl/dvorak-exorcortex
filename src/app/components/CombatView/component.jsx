@@ -15,7 +15,7 @@ const CombatView = ({
   thrown,
   will,
 }) => (
-  <div className="CombatView">
+  <div className="CombatView View">
     <div className="App__section-title">Health & Resolve</div>
     <Health />
     <div className="App__section-title">Armor Class</div>

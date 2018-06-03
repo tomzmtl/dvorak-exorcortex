@@ -21,7 +21,7 @@ const renderSkill = (skill) => {
 };
 
 const SkillsView = ({ skills }) => (
-  <div className="SkillsView">
+  <div className="SkillsView View">
     <div className="SkillsView__col">
       <div className="App__section-title">Main Skills</div>
       {skills.filter(s => s.total >= 4).map(renderSkill)}

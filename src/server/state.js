@@ -325,6 +325,7 @@ module.exports = {
             radius: 15,
             explode: [1, 6],
           },
+          id: 1,
         },
         {
           name: 'Frag Grenade mk.2',
@@ -334,6 +335,7 @@ module.exports = {
             radius: 15,
             explode: [2, 6],
           },
+          id: 2,
         },
         {
           name: 'Iridishell Basic',
@@ -350,6 +352,7 @@ module.exports = {
             upgradeSlots: 0,
             bulk: 2,
           },
+          id: 3,
         },
 
         {
@@ -368,6 +371,7 @@ module.exports = {
               'nonlethal',
             ],
           },
+          id: 4,
         },
 
         {
@@ -390,6 +394,7 @@ module.exports = {
               'quick-reload',
             ],
           },
+          id: 5,
         },
 
         {
@@ -412,6 +417,7 @@ module.exports = {
               },
             ],
           },
+          id: 6,
         },
 
         {
@@ -428,6 +434,7 @@ module.exports = {
             ammo: null,
             special: [],
           },
+          id: 7,
         },
       ],
     },
@@ -448,5 +455,12 @@ module.exports = {
       { name: 'Jet Dash' },
       { name: 'Hack directory' },
     ],
+  },
+  ui: {
+    sidePanelOpen: false,
+    inspect: {
+      type: 'inventory',
+      id: null,
+    },
   },
 };

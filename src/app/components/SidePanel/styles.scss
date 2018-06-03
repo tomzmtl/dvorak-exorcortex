@@ -1,0 +1,19 @@
+@import '../../../scss/core/variables';
+
+
+.SidePanel {
+  position: absolute;
+  padding: 30px;
+  top: 0;
+  right: 0;
+  width: 450px;
+  background: rgba(10,10,10,0.9);
+  height: 100vh;
+  color: #EEE;
+  transform: translateX(100%);
+  transition: 300ms ease-out;
+
+  &--open {
+    transform: translateX(0);
+  }
+}

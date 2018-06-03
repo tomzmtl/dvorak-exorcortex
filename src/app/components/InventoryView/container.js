@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import SkillsView from './component';
+import { inspectItem } from '../../redux/actions/ui';
 
 
 const categories = {
@@ -17,4 +18,8 @@ const mapState = ({ app }) => ({
   categories: groupCategories(app.inventory.items),
 });
 
-export default connect(mapState)(SkillsView);
+const mapActions = dispatch => ({
+  inspectItem: id => dispatch(inspectItem(id)),
+});
+
+export default connect(mapState, mapActions)(SkillsView);
