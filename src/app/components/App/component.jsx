@@ -8,6 +8,8 @@ import InventoryView from '../InventoryView/container';
 import './styles.scss';
 
 
+const appendHerokuVersion = () => process.env.HEROKU_RELEASE_VERSION || 'vXX';
+
 const views = {
   root: <div>{'DV0R4K LVL.4'}</div>,
   'root.combat': <CombatView />,
@@ -18,7 +20,9 @@ const views = {
 const App = ({ route }) => (
   <div className="App">
     <div className="App__header">
-      <div className="App__title">{'DV0R4K ExoCortex UI LVL.4'}</div>
+      <div className="App__title">
+        {`DV0R4K ExoCortex UI ${appendHerokuVersion()}`}
+      </div>
       <Tabs selectedTab={Object.keys(views).findIndex(key => key === route.name)} />
     </div>
     <div className="App__view">

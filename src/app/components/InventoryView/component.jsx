@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import InventoryItem from '../InventoryItem/component';
+import Stat from '../Stat/component';
 
 import './styles.scss';
 
@@ -16,6 +17,11 @@ const renderItems = categories => categories.map(cat => (
 
 const InventoryView = ({ categories }) => (
   <div className="InventoryView">
+    <div className="InventoryView__category InventoryView__money">
+      <div className="App__section">
+        <Stat name="ISK" value={1684} />
+      </div>
+    </div>
     {renderItems(categories)}
   </div>
 );
