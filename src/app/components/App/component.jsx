@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Tabs from '../Tabs/component';
+import Tabs from '../Tabs/container';
 import CombatView from '../CombatView/container';
 import SkillsView from '../SkillsView/container';
 import InventoryView from '../InventoryView/container';
