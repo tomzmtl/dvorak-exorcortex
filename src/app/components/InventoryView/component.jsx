@@ -21,7 +21,7 @@ const InventoryView = ({ categories, inspectItem }) => (
   <div className="InventoryView View">
     <div className="InventoryView__category InventoryView__money">
       <div className="App__section">
-        <Stat name="ISK" value={1684} />
+        <Stat name="ISK" value={3750} />
       </div>
     </div>
     {renderItems(categories, inspectItem)}
